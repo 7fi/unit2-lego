@@ -1,7 +1,10 @@
 :root{
     --background:#fff;
     --header:#ddd;
+    --content:#ccc;
+    --secondary:#eee;
     --highlight:rgb(26, 126, 219);
+    --radius:5px;
 }
 .darkMode{
     --background:#000;
@@ -45,7 +48,8 @@ body{
     flex-direction: row;
     gap:10px;
     margin: 10px;
-    background-color: var(--header);
+    background-color: var(--secondary);
+    border-radius: var(--radius);
     padding:5px;
 }
 .stepNum{
@@ -53,10 +57,22 @@ body{
     font-weight: 600;
     font-size: 1.2em;
 }
+#step{
+    background-color: var(--content);
+    border-radius: var(--radius);
+    margin:20px;
+    padding:10px;
+}
+#stepInstruction{
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+    padding:5px;
+}
 .stepSelected{
     /* color:var(--hightlight); */
     color:#f00;
 }
 #stepImg{
+    margin:10px;
     max-height: 600px;
 }
