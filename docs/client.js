@@ -6,6 +6,9 @@ const stepImg = document.getElementById("stepImg");
 const nextStep = document.getElementById("nextStep");
 const prevStep = document.getElementById("prevStep");
 
+const modeToggle = document.getElementById("modeToggle");
+let lightMode = true;
+
 const steps = [
     {instruction:"Stack two black four prong Legos", img:"../img/step1.png"},
     {instruction:"Stack one yellow four prong Lego directly on top of the stack created in previous step."},
@@ -26,44 +29,30 @@ const steps = [
     {instruction:"Stack two brown connector Lego on top of each other and place them on stack created in previous step.",img:"../img/step17.png"},
     {instruction:"Stack one transparent yellow cap Lego on top of stack created in previous step.",img:"../img/step18.png"},
 ]
-loadStep(1);
 
-for (let i = 0; i < steps.length; i++) {
-    const stepSelector = document.createElement('div');
-    stepSelector.innerHTML = i + 1;
-    stepSelector.classList.add('stepNum')
-    stepSelector.addEventListener('click', () => {
-        loadStep(stepSelector.innerHTML);
-        if(document.getElementsByClassName('stepSelected').length > 0)document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
-        stepSelector.classList.add("stepSelected");
-    })
-    // stepSelector.onclick = loadStep(stepSelector.innerHTML);
-    stepHolder.appendChild(stepSelector);
-    const stepSeperator = document.createElement('div');
-    stepSeperator.innerHTML = "|";
-    stepHolder.appendChild(stepSeperator);
-}
-document.getElementsByClassName('stepNum')[0].classList.add('stepSelected');
-
-function loadStep(stepNum){
-    stepInstruction.innerHTML = steps[stepNum - 1].instruction;
-    stepImg.src = steps[stepNum - 1].img;
-    // console.log(steps[stepNum].instruction);
+function load(){
+    let myBool = (decodeURIComponent(document.cookie).split('=')[1] === 'true');
+    console.log("Lightmode is wrong:", myBool != lightMode)
+    if(myBool != lightMode){
+        switchMode();
+    }
 }
 
-nextStep.addEventListener('click', () =>{
-    let currentStep = parseInt(document.getElementsByClassName('stepSelected')[0].innerHTML);
-    if(currentStep < steps.length){
-        loadStep(currentStep + 1);
-        document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
-        document.getElementsByClassName('stepNum')[currentStep].classList.add("stepSelected");
-    }
+// Toggle between light and dark mode
+modeToggle.addEventListener('click', () => {
+    console.log("modeSwitched")
+    switchMode();
 })
-prevStep.addEventListener('click', () =>{
-    let currentStep = parseInt(document.getElementsByClassName('stepSelected')[0].innerHTML);
-    if(currentStep > 0){
-        loadStep(currentStep - 1);
-        document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
-        document.getElementsByClassName('stepNum')[currentStep - 2].classList.add("stepSelected");
+
+function switchMode(){
+    if(document.body.classList.contains("darkMode")){
+        document.body.classList.remove("darkMode");
+        modeToggle.children[0].classList.replace('gg-moon','gg-moon');
     }
-})
+    else{
+        document.body.classList.add("darkMode");
+        modeToggle.children[0].classList.replace('gg-moon','gg-sun');
+    }
+    lightMode = !lightMode;
+    document.cookie = ("lightMode=" + lightMode + "; path=/");
+}

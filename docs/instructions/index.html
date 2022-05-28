@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instructions</title>
+    <link href='https://css.gg/moon.css' rel='stylesheet'>
+    <link href='https://css.gg/sun.css' rel='stylesheet'>
     <link rel="stylesheet" href="../main.css">
 </head>
-<body>
+<body onload="load()">
     <div id="header">
         <h1 id="title">Unit 2</h1>
         <div id="navBar">
+            <button id="modeToggle" title="Toggle Dark Mode" type="button"><i class="gg-sun"></i></button>
             <a href="../">Home</a> | 
             <a href="../about/">About</a> | 
             <a href="../instructions/">Instructions</a>
@@ -32,4 +35,5 @@
     </div>
 </body>
 <script src="../client.js"></script>
+<script src="../instructions.js"></script>
 </html>
