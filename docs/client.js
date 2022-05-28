@@ -46,12 +46,12 @@ modeToggle.addEventListener('click', () => {
 
 function switchMode(){
     if(document.body.classList.contains("darkMode")){
+        modeToggle.children[0].classList.replace('gg-sun','gg-moon');
         document.body.classList.remove("darkMode");
-        modeToggle.children[0].classList.replace('gg-moon','gg-moon');
     }
     else{
-        document.body.classList.add("darkMode");
         modeToggle.children[0].classList.replace('gg-moon','gg-sun');
+        document.body.classList.add("darkMode");
     }
     lightMode = !lightMode;
     document.cookie = ("lightMode=" + lightMode + "; path=/");

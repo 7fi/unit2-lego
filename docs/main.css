@@ -50,6 +50,7 @@ body{
     flex-direction: row;
     place-content: space-between;
     place-items: center;
+    position: fixed;
 }
 #title{
     margin:10px;
@@ -62,14 +63,17 @@ body{
     gap:7px;
 }
 
+#instructionHolder{
+    grid-area: content;
+}
 #stepHolder{
     display: flex;
     flex-direction: row;
     gap:10px;
-    margin: 10px;
+    margin: 15px;
     background-color: var(--secondary);
     border-radius: var(--radius);
-    padding:5px;
+    padding:10px;
     font-weight: 600;
     place-items: center;
 }
@@ -124,4 +128,27 @@ body{
 }
 #nextStep:hover, #prevStep:hover{
     background-color: var(--highlight);
+}
+
+/*About*/
+#bioHolder{
+    display: flex;
+    grid-area: content;
+    margin-top: 5px;
+    width: 100%;
+}
+#bioHolder div{
+    flex-grow:1;
+}
+.person{
+    background-color: var(--secondary);
+    padding:10px;
+    border-radius: var(--radius);
+    margin: 10px;
+}
+.bioText{
+    background-color: var(--content);
+    margin: 5px;
+    padding: 5px;
+    border-radius: var(--radius);
 }
