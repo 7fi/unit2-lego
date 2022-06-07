@@ -127,7 +127,7 @@ function createSteps(steps){
         stepSelector.innerHTML = i + 1;
         stepSelector.classList.add('stepNum')
         stepSelector.addEventListener('click', () => {
-            loadStep(stepSelector.innerHTML);
+            loadStep(stepSelector.innerHTML, currentTab);
             if(document.getElementsByClassName('stepSelected').length > 0)document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
             stepSelector.classList.add("stepSelected");
         })

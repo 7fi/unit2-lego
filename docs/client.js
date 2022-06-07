@@ -16,14 +16,14 @@ let lightMode = true;
 
 const baseSteps = [
     {instruction:"Lay the flat 72-prong green Lego horizontally.", img:"../img/base/step1.png"},
-    {instruction:"Place one 8-prong pale blue Lego horizontally in the upper left corner of the base Lego.", img:"../img/base/step2.png"},
-    {instruction:"Place one 12-prong sky blue Lego below pale blue Lego.", img:"../img/base/step3.png"},
-    {instruction:"Put two 4-prong narrow sky blue Legos to the right of the 12-prong Lego.", img:"../img/base/step4.png"},
-    {instruction:"Put two 2-prong sky blue Legos to the right of the narrow Legos.", img:"../img/base/step5.png"},
-    {instruction:"Starting at the bottom left corner of the green base, place three 6-prong dark blue Legos side by side.", img:"../img/base/step6.png"},
-    {instruction:"Place three 2-prong dark blue Legos to the right of the other dark blue Legos.", img:"../img/base/step7.png"},
-    {instruction:"Stack two 2-prong light blue Legos horizontally on top of the dark blue Legos in the bottom right corner of the base.", img:"../img/base/step8.png"},
-    {instruction:"Stack two 8-prong light blue Legos side by side to the left of the two 2-prong light blue Legos.", img:"../img/base/step9.png"},
+    {instruction:"Place one 8-prong pale blue Lego horizontally in the upper left corner of the base Lego.", img:"../img/base/step1.png"},
+    {instruction:"Place one 12-prong sky blue Lego below pale blue Lego.", img:"../img/base/step2.png"},
+    {instruction:"Put two 4-prong narrow sky blue Legos to the right of the 12-prong Lego.", img:"../img/base/step3.png"},
+    {instruction:"Put two 2-prong sky blue Legos to the right of the narrow Legos.", img:"../img/base/step4.png"},
+    {instruction:"Starting at the bottom left corner of the green base, place three 6-prong dark blue Legos side by side.", img:"../img/base/step5.png"},
+    {instruction:"Place three 2-prong dark blue Legos to the right of the other dark blue Legos.", img:"../img/base/step6.png"},
+    {instruction:"Stack two 2-prong light blue Legos horizontally on top of the dark blue Legos in the bottom right corner of the base.", img:"../img/base/step7.png"},
+    {instruction:"Stack two 8-prong light blue Legos side by side to the left of the two 2-prong light blue Legos.", img:"../img/base/step8.png"},
 ];
 const ferrySteps = [
     {instruction:"Place two 2-prong slanted white Legos on each end of one flat 16-prong green Lego.", img:"../img/ferry/step1.png"},
