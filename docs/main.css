@@ -17,6 +17,7 @@
 }
 body{
     font-family: 'Roboto Mono', monospace;
+    transition: 250ms;
 }
 
 a:link { text-decoration: none; color:inherit;}

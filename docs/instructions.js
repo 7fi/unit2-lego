@@ -142,28 +142,40 @@ function createSteps(steps){
 
 function loadStep(stepNum,tab){
     if(tab == "base"){
-        stepInstruction.innerHTML = baseSteps[stepNum - 1].instruction;
-        stepImg.src = baseSteps[stepNum - 1].img;
+        if(stepNum < baseSteps.length){
+            stepInstruction.innerHTML = baseSteps[stepNum - 1].instruction;
+            stepImg.src = baseSteps[stepNum - 1].img;
+        }else{
+            loadTab("ferry");
+        }
     }else if(tab == "ferry"){
-        stepInstruction.innerHTML = ferrySteps[stepNum - 1].instruction;
-        stepImg.src = ferrySteps[stepNum - 1].img;
+        if(stepNum < ferrySteps.length){
+            stepInstruction.innerHTML = ferrySteps[stepNum - 1].instruction;
+            stepImg.src = ferrySteps[stepNum - 1].img;
+        }else{
+            loadTab("mountain");
+        }
     }else if(tab == "mountain"){
-        stepInstruction.innerHTML = mountainSteps[stepNum - 1].instruction;
-        stepImg.src = mountainSteps[stepNum - 1].img;
+        if(stepNum < mountainSteps.length){
+            stepInstruction.innerHTML = mountainSteps[stepNum - 1].instruction;
+            stepImg.src = mountainSteps[stepNum - 1].img;
+        }else{
+            loadTab("needle");
+        }
     }else{
-        stepInstruction.innerHTML = needleSteps[stepNum - 1].instruction;
-        stepImg.src = needleSteps[stepNum - 1].img;
+        if(stepNum < needleSteps.length){
+            stepInstruction.innerHTML = needleSteps[stepNum - 1].instruction;
+            stepImg.src = needleSteps[stepNum - 1].img;
+        }
     }
     // console.log(steps[stepNum].instruction);
 }
 
 nextStep.addEventListener('click', () =>{
     let currentStep = parseInt(document.getElementsByClassName('stepSelected')[0].innerHTML);
-    if(currentStep < needleSteps.length){
-        loadStep(currentStep + 1, currentTab);
-        document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
-        document.getElementsByClassName('stepNum')[currentStep].classList.add("stepSelected");
-    }
+    loadStep(currentStep + 1, currentTab);
+    document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
+    document.getElementsByClassName('stepNum')[currentStep].classList.add("stepSelected");
 })
 prevStep.addEventListener('click', () =>{
     let currentStep = parseInt(document.getElementsByClassName('stepSelected')[0].innerHTML);
