@@ -1,5 +1,5 @@
 let currentTab = "base";
-
+let tabs = ["base", "ferry", "mountain", "needle","final"]
 loadTab(currentTab);
 loadStep(1, currentTab);
 
@@ -80,45 +80,27 @@ function loadTab(tab){
         needleSeperator.classList.add('curTab');
         createSteps(steps);
     }
-
-    // if(tab == "needle"){
-    //     steps = needleSteps;
-    //     // for (let i = 0; i < 8; i++) {
-    //     //     stepHolder.children[i].classList.remove("curTab");
-    //     // }
-        
-    //     needleTab.classList.add('curTab');
-    //     stepHolder.children[7].classList.add('curTab');
-    // }else if(tab == "ferry"){
-    //     steps = ferrySteps;
-    //     for (let i = 0; i < 8; i++) {
-    //         stepHolder.children[i].classList.remove("curTab");
-    //     }
-    //     ferryTab.classList.add('curTab');
-    //     stepHolder.children[3].classList.add('curTab');
-    // }else if(tab == "mountain"){
-    //     steps = mountainSteps;
-    //     for (let i = 0; i < 8; i++) {
-    //         stepHolder.children[i].classList.remove("curTab");
-    //     }
-    //     mountainTab.classList.add('curTab');
-    //     stepHolder.children[5].classList.add('curTab');
-    // }else{
-    //     steps = baseSteps;
-    //     for (let i = 0; i < 8; i++) {
-    //         stepHolder.children[i].classList.remove("curTab");
-    //     }
-    //     baseTab.classList.add('curTab');
-    //     stepHolder.children[1].classList.add('curTab');
-    // }
-
-    // oldSteps = document.getElementsByClassName('stepNum');
-    // for (let i = 8; i < stepHolder.children.length; i++) {
-    //     stepHolder.children[i].classList.add('curTab');
-    // }
     
+    const finalTab = document.createElement('div');
+    finalTab.classList.add("tabName");
+    finalTab.id = "finalTab";
+    finalTab.onclick = function(){loadTab("final")};
+    finalTab.innerHTML = "Part 5";
+    stepHolder.appendChild(finalTab);
+    const finalSeperator = document.createElement('div');
+    finalSeperator.classList.add("stepSeperator");
+    finalSeperator.innerHTML = "|";
+    stepHolder.appendChild(finalSeperator);
+    if(tab == "final"){
+        steps = finalSteps;
+        finalTab.classList.add('curTab');
+        finalSeperator.classList.add('curTab');
+        createSteps(steps);
+    } 
+
     loadStep(1,currentTab);
     document.getElementsByClassName('stepNum')[0].classList.add('stepSelected');
+    // console.log(document.getElementsByClassName('stepNum')[0].classList);
 }
 
 function createSteps(steps){
@@ -131,7 +113,6 @@ function createSteps(steps){
             if(document.getElementsByClassName('stepSelected').length > 0)document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
             stepSelector.classList.add("stepSelected");
         })
-        // stepSelector.onclick = loadStep(stepSelector.innerHTML);
         stepHolder.appendChild(stepSelector);
         const stepSeperator = document.createElement('div');
         stepSeperator.classList.add("stepSeperator");
@@ -142,25 +123,32 @@ function createSteps(steps){
 
 function loadStep(stepNum,tab){
     if(tab == "base"){
-        if(stepNum < baseSteps.length){
+        if(stepNum <= baseSteps.length){
             stepInstruction.innerHTML = baseSteps[stepNum - 1].instruction;
             stepImg.src = baseSteps[stepNum - 1].img;
         }else{
+            // document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
             loadTab("ferry");
+            // loadStep(1,currentTab);
+            document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
         }
     }else if(tab == "ferry"){
-        if(stepNum < ferrySteps.length){
+        if(stepNum <= ferrySteps.length){
             stepInstruction.innerHTML = ferrySteps[stepNum - 1].instruction;
             stepImg.src = ferrySteps[stepNum - 1].img;
         }else{
             loadTab("mountain");
+            loadStep(1,currentTab);
+            document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
         }
     }else if(tab == "mountain"){
-        if(stepNum < mountainSteps.length){
+        if(stepNum <= mountainSteps.length){
             stepInstruction.innerHTML = mountainSteps[stepNum - 1].instruction;
             stepImg.src = mountainSteps[stepNum - 1].img;
         }else{
             loadTab("needle");
+            loadStep(1,currentTab);
+            document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
         }
     }else{
         if(stepNum < needleSteps.length){
@@ -173,9 +161,16 @@ function loadStep(stepNum,tab){
 
 nextStep.addEventListener('click', () =>{
     let currentStep = parseInt(document.getElementsByClassName('stepSelected')[0].innerHTML);
-    loadStep(currentStep + 1, currentTab);
-    document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
-    document.getElementsByClassName('stepNum')[currentStep].classList.add("stepSelected");
+    // console.log(document.getElementsByClassName('step'))
+    if(document.getElementsByClassName('stepNum').length != currentStep){
+        loadStep(currentStep + 1, currentTab);
+        document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
+        document.getElementsByClassName('stepNum')[currentStep].classList.add("stepSelected");
+    }else{
+        if(tabs.indexOf(currentTab) != tabs.length - 1)
+        loadTab(tabs[tabs.indexOf(currentTab) + 1]);
+        document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
+    }
 })
 prevStep.addEventListener('click', () =>{
     let currentStep = parseInt(document.getElementsByClassName('stepSelected')[0].innerHTML);
