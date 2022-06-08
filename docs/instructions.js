@@ -122,6 +122,7 @@ function createSteps(steps){
 }
 
 function loadStep(stepNum,tab){
+    // console.log("loading step ", stepNum);
     if(tab == "base"){
         if(stepNum <= baseSteps.length){
             stepInstruction.innerHTML = baseSteps[stepNum - 1].instruction;
@@ -150,10 +151,19 @@ function loadStep(stepNum,tab){
             loadStep(1,currentTab);
             document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
         }
-    }else{
-        if(stepNum < needleSteps.length){
+    }else if(tab == "needle"){
+        if(stepNum <= needleSteps.length){
             stepInstruction.innerHTML = needleSteps[stepNum - 1].instruction;
             stepImg.src = needleSteps[stepNum - 1].img;
+        }else{
+            loadTab("final");
+            loadStep(1,currentTab);
+            document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
+        }
+    }else{
+        if(stepNum < finalSteps.length){
+            stepInstruction.innerHTML = finalSteps[stepNum - 1].instruction;
+            stepImg.src = finalSteps[stepNum - 1].img;
         }
     }
     // console.log(steps[stepNum].instruction);
