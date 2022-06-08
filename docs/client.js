@@ -37,7 +37,7 @@ const mountainSteps = [
     {instruction:"Stack two 2x4 green bricks directly on top of grey bricks.", img:"../img/mountain/step2.png"},
     {instruction:"Stack two 1x2 lime green bricks in the center of the green bricks.", img:"../img/mountain/step3.png"},
     {instruction:"Place one 2x4 green brick on each side of the lime green bricks.", img:"../img/mountain/step4.png"},
-    {instruction:"Put one 1x1 sloped green brick underneath the overhanging prongs on the right side. \nNote: the slanted side should be facing away from you.", img:"../img/mountain/step5.png"},
+    {instruction:"Put one 1x2 sloped green brick on each outside edge. \nNote: the slanted side should be facing away from you.", img:"../img/mountain/step5.png"},
     {instruction:"In the center of the stack, place two 2x3 brown bricks side by side.", img:"../img/mountain/step6.png"},
     {instruction:"Add one 1x2 red/brown brick to each side of the brown bricks.", img:"../img/mountain/step7.png"},
     {instruction:"Stack three 2x2 light brown bricks directly on top of the brown bricks.", img:"../img/mountain/step8.png"},

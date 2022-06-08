@@ -14,7 +14,7 @@ function loadTab(tab){
     baseTab.classList.add("tabName");
     baseTab.id = "baseTab";
     baseTab.onclick = function(){loadTab("base")};
-    baseTab.innerHTML = "Part 1";
+    baseTab.innerHTML = "Base";
     stepHolder.appendChild(baseTab);
     const baseSeperator = document.createElement('div');
     baseSeperator.classList.add("stepSeperator");
@@ -32,7 +32,7 @@ function loadTab(tab){
     ferryTab.classList.add("tabName");
     ferryTab.id = "ferryTab";
     ferryTab.onclick = function(){loadTab("ferry")};
-    ferryTab.innerHTML = "Part 2";
+    ferryTab.innerHTML = "Ferry";
     stepHolder.appendChild(ferryTab);
     const ferrySeperator = document.createElement('div');
     ferrySeperator.classList.add("stepSeperator");
@@ -50,7 +50,7 @@ function loadTab(tab){
     mountainTab.classList.add("tabName");
     mountainTab.id = "mountainTab";
     mountainTab.onclick = function(){loadTab("mountain")};
-    mountainTab.innerHTML = "Part 3";
+    mountainTab.innerHTML = "Mountain";
     stepHolder.appendChild(mountainTab);
     const mountainSeperator = document.createElement('div');
     mountainSeperator.classList.add("stepSeperator");
@@ -68,7 +68,7 @@ function loadTab(tab){
     needleTab.classList.add("tabName");
     needleTab.id = "needleTab";
     needleTab.onclick = function(){loadTab("needle")};
-    needleTab.innerHTML = "Part 4";
+    needleTab.innerHTML = "Space Needle";
     stepHolder.appendChild(needleTab);
     const needleSeperator = document.createElement('div');
     needleSeperator.classList.add("stepSeperator");
@@ -85,7 +85,7 @@ function loadTab(tab){
     finalTab.classList.add("tabName");
     finalTab.id = "finalTab";
     finalTab.onclick = function(){loadTab("final")};
-    finalTab.innerHTML = "Part 5";
+    finalTab.innerHTML = "Assembly";
     stepHolder.appendChild(finalTab);
     const finalSeperator = document.createElement('div');
     finalSeperator.classList.add("stepSeperator");
