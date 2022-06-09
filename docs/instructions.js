@@ -122,7 +122,7 @@ function createSteps(steps){
 }
 
 function loadStep(stepNum,tab){
-    // console.log("loading step ", stepNum);
+    console.log("loading step ", stepNum);
     if(tab == "base"){
         if(stepNum <= baseSteps.length){
             stepInstruction.innerHTML = baseSteps[stepNum - 1].instruction;
@@ -161,7 +161,7 @@ function loadStep(stepNum,tab){
             document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
         }
     }else{
-        if(stepNum < finalSteps.length){
+        if(stepNum <= finalSteps.length){
             stepInstruction.innerHTML = finalSteps[stepNum - 1].instruction;
             stepImg.src = finalSteps[stepNum - 1].img;
         }
