@@ -186,10 +186,23 @@ body{
     padding:10px;
     border-radius: var(--radius);
     margin: 10px;
+    width: 33%;
 }
 .bioText{
     background-color: var(--content);
-    margin: 5px;
+    margin: 5px 0;
     padding: 5px;
+    border-radius: var(--radius);
+}
+.bioImg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+.bioRole{
+    background-color: var(--content);
+    padding: 5px;
+    margin: 5px 0;
     border-radius: var(--radius);
 }
