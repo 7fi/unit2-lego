@@ -144,8 +144,8 @@ function loadStep(stepNum,tab){
     console.log("loading step ", stepNum);
     if(tab == "parts"){    
         if(stepNum <= partsSteps.length){
-            stepInstruction.innerHTML = partsSteps[stepNum - 1].instruction;
-            stepImg.src = partsSteps[stepNum - 1].img;
+            stepInstruction.innerHTML = "Base:<br>1 – 6x12 green plate (4541414)<br><br>1 – 2x4 pale blue brick (4205058)<br><br>1 – 2x6 sky blue brick (6022000)<br><br>2 – 1x4 sky blue brick (6036238)<br><br>2 – 1x2 sky blue brick (6092674)<br><br>3 – 2x3 dark blue brick (300223)<br><br>3 – 1x2 dark blue brick (300423)<br><br>2 – 1x2 light blue brick (6004943)<br><br>2 – 2x4 light blue brick (4655172)<br><br>>> 17 total pieces<br><br><br>Ferry:<br><br>1 – 2x8 green plate (303428)<br><br>2 – 1x2 sloped white brick (303901)<br><br>2 – 1x4 white brick with holes (4143254)<br><br>2 – 2x3 light blue plate (6144149)<br><br>1 – 4x4 white brick (300301)<br><br>2 – 1x2 clear brick (306540)<br><br> >> 10 total pieces <br><br> <br> Mt. Rainier:<br><br>1 – 2x6 grey brick (4210875)<br><br>2 – 1x2 grey brick (4211088)<br><br>4 – 2x4 green brick (4106356)<br><br>2 – 1x2 lime green brick (4164022)<br><br>2 – 1x1 sloped green brick (412969)<br><br>2 – 2x3 brown brick (4216668)<br><br>2 – 1x2 red/brown brick (4539102)<br><br>3 – 2x2 light brown brick (6058085)<br><br>2 – 1x2 transparent yellow brick (306544)<br><br>2 – 2x3 tan brick (4159739)<br><br>2 – 1x2 tall white brick (4113261)<br><br>2 – 1x2 white brick (300401)<br><br>4 – 1x2 clear brick (306540)<br><br>1 – 2x2 white brick (300301)<br><br>>> 31 total pieces<br><br><br>Space Needle:<br><br>2 – 2x2 black brick (300326)<br><br>1 – 2x2 yellow brick (6212064)<br><br>2 – 1x2 yellow brick (6022083)<br><br>4 – 1x2 sage green brick (4616581)<br><br>2 – 2x2 light grey brick (4211387)<br><br>2 – 2x2 black plate (302226)<br><br>2 – 2x4 tan plate (4267874)<br><br>2 – 2x6 lime green plate (4621548)<br><br>2 – 2x8 light green/yellow plate (6216968)<br><br>1 – 2x8 green plate (303428)<br><br>2 – 2x2 lime green plate (4537937)<br><br>1 – black round brick (6024730)<br><br>2 – brown connector (4211183)<br><br>1 – clear yellow cap (4650500)<br><br>>> 26 total pieces";
+            stepImg.style.display = "none";
         }else{
             // document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
             loadTab("base");
@@ -155,6 +155,7 @@ function loadStep(stepNum,tab){
     }else if(tab == "base"){
         if(stepNum <= baseSteps.length){
             stepInstruction.innerHTML = baseSteps[stepNum - 1].instruction;
+            stepImg.style.display = "block";
             stepImg.src = baseSteps[stepNum - 1].img;
         }else{
             // document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');

@@ -1,0 +1,107 @@
+Base:
+
+1 – 6x12 green plate (4541414)
+
+1 – 2x4 pale blue brick (4205058)
+
+1 – 2x6 sky blue brick (6022000)
+
+2 – 1x4 sky blue brick (6036238)
+
+2 – 1x2 sky blue brick (6092674)
+
+3 – 2x3 dark blue brick (300223)
+
+3 – 1x2 dark blue brick (300423)
+
+2 – 1x2 light blue brick (6004943)
+
+2 – 2x4 light blue brick (4655172)
+
+>> 17 total pieces
+
+ 
+
+Ferry:
+
+1 – 2x8 green plate (303428)
+
+2 – 1x2 sloped white brick (303901)
+
+2 – 1x4 white brick with holes (4143254)
+
+2 – 2x3 light blue plate (6144149)
+
+1 – 4x4 white brick (300301)
+
+2 – 1x2 clear brick (306540)
+
+>> 10 total pieces
+
+ 
+
+Mt. Rainier:
+
+1 – 2x6 grey brick (4210875)
+
+2 – 1x2 grey brick (4211088)
+
+4 – 2x4 green brick (4106356)
+
+2 – 1x2 lime green brick (4164022)
+
+2 – 1x1 sloped green brick (412969)
+
+2 – 2x3 brown brick (4216668)
+
+2 – 1x2 red/brown brick (4539102)
+
+3 – 2x2 light brown brick (6058085)
+
+2 – 1x2 transparent yellow brick (306544)
+
+2 – 2x3 tan brick (4159739)
+
+2 – 1x2 tall white brick (4113261)
+
+2 – 1x2 white brick (300401)
+
+4 – 1x2 clear brick (306540)
+
+1 – 2x2 white brick (300301)
+
+>> 31 total pieces
+
+ 
+
+Space Needle:
+
+2 – 2x2 black brick (300326)
+
+1 – 2x2 yellow brick (6212064)
+
+2 – 1x2 yellow brick (6022083)
+
+4 – 1x2 sage green brick (4616581)
+
+2 – 2x2 light grey brick (4211387)
+
+2 – 2x2 black plate (302226)
+
+2 – 2x4 tan plate (4267874)
+
+2 – 2x6 lime green plate (4621548)
+
+2 – 2x8 light green/yellow plate (6216968)
+
+1 – 2x8 green plate (303428)
+
+2 – 2x2 lime green plate (4537937)
+
+1 – black round brick (6024730)
+
+2 – brown connector (4211183)
+
+1 – clear yellow cap (4650500)
+
+>> 26 total pieces

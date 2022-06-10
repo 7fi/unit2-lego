@@ -15,7 +15,7 @@ const modeToggle = document.getElementById("modeToggle");
 let lightMode = true;
 
 const partsSteps = [
-    {instruction:"LIST OF PARTS", img:"../img/base/step0.png"}
+    {instruction:"../parts.txt", img:"../img/base/step0.png"}
 ]
 
 const baseSteps = [
