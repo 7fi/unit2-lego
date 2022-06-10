@@ -1,5 +1,5 @@
-let currentTab = "base";
-let tabs = ["base", "ferry", "mountain", "needle","final"]
+let currentTab = "parts";
+let tabs = ["parts","base", "ferry", "mountain", "needle","final"]
 loadTab(currentTab);
 loadStep(1, currentTab);
 
@@ -10,6 +10,25 @@ function loadTab(tab){
 
     currentTab = tab;
     let steps;
+
+    const partsTab = document.createElement('div');
+    partsTab.classList.add("tabName");
+    partsTab.id = "partsTab";
+    partsTab.onclick = function(){loadTab("parts")};
+    partsTab.innerHTML = "Parts";
+    stepHolder.appendChild(partsTab);
+    const partsSeperator = document.createElement('div');
+    partsSeperator.classList.add("stepSeperator");
+    partsSeperator.innerHTML = "|";
+    stepHolder.appendChild(partsSeperator);
+
+    if(tab == "parts"){
+        steps = partsSteps;
+        partsTab.classList.add('curTab');
+        partsSeperator.classList.add('curTab');
+        createSteps(steps);
+    }
+
     const baseTab = document.createElement('div');
     baseTab.classList.add("tabName");
     baseTab.id = "baseTab";
@@ -123,7 +142,17 @@ function createSteps(steps){
 
 function loadStep(stepNum,tab){
     console.log("loading step ", stepNum);
-    if(tab == "base"){
+    if(tab == "parts"){    
+        if(stepNum <= partsSteps.length){
+            stepInstruction.innerHTML = partsSteps[stepNum - 1].instruction;
+            stepImg.src = partsSteps[stepNum - 1].img;
+        }else{
+            // document.getElementsByClassName('stepSelected')[0].classList.remove('stepSelected');
+            loadTab("base");
+            // loadStep(1,currentTab);
+            document.getElementsByClassName('stepNum')[0].classList.add("stepSelected");
+        }
+    }else if(tab == "base"){
         if(stepNum <= baseSteps.length){
             stepInstruction.innerHTML = baseSteps[stepNum - 1].instruction;
             stepImg.src = baseSteps[stepNum - 1].img;

@@ -14,6 +14,10 @@ const baseTab = document.getElementById('baseTab');
 const modeToggle = document.getElementById("modeToggle");
 let lightMode = true;
 
+const partsSteps = [
+    {instruction:"LIST OF PARTS", img:"../img/base/step0.png"}
+]
+
 const baseSteps = [
     {instruction:"Lay the flat 6x12 green base plate horizontally.", img:"../img/base/step0.png"},
     {instruction:"Place one 2x4 pale blue brick horizontally in the upper left corner of the base plate.", img:"../img/base/step1.png"},
@@ -53,11 +57,11 @@ const mountainSteps = [
 const needleSteps = [ 
     {instruction:"Stack two 2x2 black square bricks directly on top of each other.", img:"../img/needle/step1.png"},
     {instruction:"Add one 2x2 yellow square brick.", img:"../img/needle/step2.png"},
-    {instruction:"Stack two 1x2 light green/yellow bricks side by side on top of the yellow brick.", img:"../img/needle/step3.png"},
+    {instruction:"Stack two 1x2 yellow bricks side by side on top of the yellow brick.", img:"../img/needle/step3.png"},
     {instruction:"Add two 1x2 sage green bricks.",img:"../img/needle/step4.png"},
     {instruction:"Repeat step 4.",img:"../img/needle/step5.png"},
-    {instruction:"Stack two 2x2 light grey bricks on top of the sage green bricks.",img:"../img/needle/step6.png"},
-    {instruction:"Stack two 1x2 light grey bricks side by side on top of the other light grey bricks.",img:"../img/needle/step7.png"},
+    {instruction:"Stack two 2x2 light grey bricks on top of the sage green bricks.",img:"../img/needle/step7.png"},
+    // {instruction:"Stack two 1x2 light grey bricks side by side on top of the other light grey bricks.",img:"../img/needle/step7.png"},
     {instruction:"Add two 2x2 black square plates.",img:"../img/needle/step8.png"},
     {instruction:"Stack one 2x4 tan plate brick on top of the stack.",img:"../img/needle/step9.png"},
     {instruction:"Add one 2x6 lime green plate centered on top of the tan plate.",img:"../img/needle/step10.png"},
@@ -68,8 +72,8 @@ const needleSteps = [
     {instruction:"Add two 2x2 lime green square plate side by side in the center of the lime green plate.",img:"../img/needle/step15.png"},
     {instruction:"Stack one 2x4 tan plate directly on top of the two lime green plate.",img:"../img/needle/step16.png"},
     {instruction:"Stack one black round brick in the center of the tan plate.",img:"../img/needle/step17.png"},
-    {instruction:"In the center of the black brick, stack two brown connector brick?s on top of each other.",img:"../img/needle/step18.png"},
-    {instruction:"Add clear yellow cap brick to the top of the connectors.",img:"../img/needle/step19.png"},
+    {instruction:"In the center of the black brick, stack two brown connector bricks on top of each other.",img:"../img/needle/step18.png"},
+    {instruction:"Add clear yellow cap tile to the top of the connectors.",img:"../img/needle/step19.png"},
 ]
 
 const finalSteps = [
