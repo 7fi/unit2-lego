@@ -71,13 +71,17 @@ body{
 #heroText{
     position: absolute;
     font-size: 3em;
+    color: #fff;
+    text-shadow: #000 3px 3px 2px;
 }
 #heroImg{
     width: 100%;
     height: 500px;
-    object-fit: cover;
-    object-position: center;
+    object-fit:contain;
+    object-position: bottom;
     position: relative;
+    background-color: #455862;
+    z-index: -1;
 }
 
 #intro, #designMemo{
@@ -175,6 +179,19 @@ body{
     grid-area: content;
     padding:10px;
     margin: 10px;
+}
+#buildButton{
+    grid-area: content;
+    width: 200px;
+    background-color: var(--content);
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    top: 750px;
+    position: absolute;
+    place-self: center;
+    border-radius: var(--radius);
+    font-size: 1.5em;
 }
 
 /*About*/
