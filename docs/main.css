@@ -80,7 +80,7 @@ body{
     position: relative;
 }
 
-#intro{
+#intro, #designMemo{
     grid-area: content;
     position: relative;
     height: auto;
@@ -171,6 +171,12 @@ body{
     transform: scale(0.95);
 }
 
+#usabilityText{
+    grid-area: content;
+    padding:10px;
+    margin: 10px;
+}
+
 /*About*/
 #bioHolder{
     display: flex;
@@ -196,8 +202,8 @@ body{
 }
 .bioImg{
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 300px;
+    object-fit: contain;
     border-radius: var(--radius);
 }
 .bioRole{
